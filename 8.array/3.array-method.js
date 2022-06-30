@@ -60,17 +60,24 @@ console.log(arr4);
 //중첩 배열을 하나의 배열로 쫙 펴기
 let arr = [
   [1, 2, 3],
-  [4, [5, 6]]
+  [4, [5, 6]],
 ];
 console.log(arr);
 console.log(arr.flat());
-console.log(arr.flat(2));//새로운 배열 리턴
+console.log(arr.flat(2)); //새로운 배열 리턴
 arr = arr.flat(2);
 
 //특정한 값으로 배열 채우기
-arr.fill(0);
+arr.fill(0); //배열 자체를 수정
 console.log(arr);
 
-arr.fill('s', 1, 3);
+arr.fill("s", 1, 3);
+console.log(arr);
+arr.fill("s", 1);
 console.log(arr);
 
+//배열을 문자열로 합하기
+let text = arr.join();
+console.log(text);
+text = arr.join(" | ");
+console.log(text);
